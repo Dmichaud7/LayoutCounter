@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/toast_button"
+        android:layout_width="@dimen/landwidthwide"
+        android:layout_height="@dimen/zerodp"
+        android:layout_marginStart="@dimen/landwidth"
+        android:layout_marginTop="@dimen/landwidth"
+        android:layout_marginEnd="@dimen/landwidth"
+        android:layout_marginBottom="@dimen/landwidth"
+        android:text="TOAST"
+        android:textColor="@color/mainlandtext"
+        app:layout_constraintBottom_toTopOf="@+id/countup_button"
+        app:layout_constraintEnd_toStartOf="@+id/count_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/countup_button"
+        android:layout_width="@dimen/landwidthwide"
+        android:layout_height="@dimen/zerodp"
+        android:layout_marginStart="@dimen/landwidth"
+        android:layout_marginEnd="@dimen/landwidth"
+        android:layout_marginBottom="@dimen/landwidth"
+        android:text="COUNT UP"
+        android:textColor="@color/mainlandtext"
+        app:layout_constraintBottom_toTopOf="@+id/countdown_button"
+        app:layout_constraintEnd_toStartOf="@+id/count_label"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toast_button" />
+    <Button
+        android:id="@+id/countdown_button"
+        android:layout_width="@dimen/landwidthwide"
+        android:layout_height="@dimen/zerodp"
+        android:layout_marginStart="@dimen/landscape_wide"
+        android:layout_marginEnd="@dimen/landwidth"
+        android:layout_marginBottom="@dimen/landwidth"
+        android:text="COUNT DOWN"
+        android:textColor="@color/mainlandtext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/count_label"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countup_button" />
+
+    <TextView
+        android:id="@+id/count_label"
+        android:layout_width="@dimen/zerodp"
+        android:layout_height="@dimen/zerodp"
+        android:layout_marginTop="@dimen/landwidth"
+        android:layout_marginEnd="@dimen/landwidth"
+        android:layout_marginBottom="@dimen/landwidth"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/secondaryText"
+        android:textSize="100dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/countup_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
